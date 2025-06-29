@@ -1,7 +1,6 @@
 import requests
 
-
-class CompanyApi:
+class WebCompanyApi:
 
     def __init__(self, url) -> None:
         self.url = url
@@ -16,7 +15,6 @@ class CompanyApi:
         resp = requests.post(self.url,
                              json=company)
         return resp.json()
-
 
 
     def edit_company(self, new_id, new_name, new_users):
