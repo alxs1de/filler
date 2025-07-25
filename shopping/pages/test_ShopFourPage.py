@@ -1,0 +1,39 @@
+import allure
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+
+class ShopFourPage:
+
+    def __init__(self, driver):
+        self._driver = driver
+
+    @allure.title("Ввод Информации")
+    @allure.feature("ENTER")
+    @allure.severity("Normal. Всё работает как надо")
+    @allure.description("Ожидание, потом заполнение полей личной информацией")
+    def fill_data(self, id_element, text_element):
+        WebDriverWait(self._driver, 10).until(
+            EC.element_to_be_clickable((By.ID, id_element)))
+        self._driver.find_element(By.ID, id_element).send_keys(text_element)
+
+    @allure.title("Нажатие на Продолжить")
+    @allure.feature("CLICK")
+    @allure.severity("Normal. Всё работает как надо")
+    @allure.description("Нажатие на кнопку 'Continue'")
+    def click_continue(self, id):
+        WebDriverWait(self._driver, 10).until(
+            EC.element_to_be_clickable((By.ID, id)))
+        self._driver.find_element(By.ID, id).click()
+
+    @allure.title("Проверка цены")
+    @allure.feature("CHECK")
+    @allure.severity("Normal. Всё работает как надо")
+    @allure.description("Поиск цены")
+    def total_cost(self):
+        total_cost = self._driver.find_element(
+            By.CLASS_NAME, "summary_total_label").text
+        total_cost_value = float(total_cost.split("$")[1])
+        print(f"Итоговая сумма {total_cost_value}")
+        return total_cost_value
