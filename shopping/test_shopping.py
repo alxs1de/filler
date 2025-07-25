@@ -2,11 +2,11 @@ from selenium import webdriver
 from selenium.webdriver.firefox.service import Service
 from webdriver_manager.firefox import GeckoDriverManager
 
-from pages.ShopOnePage import ShopOnePage
-from pages.ShopTwoPage import ShopTwoPage
-from pages.ShopThreePage import ShopThreePage
-from pages.ShopFourPage import ShopFourPage
-from pages.ShopFivePage import ShopFivePage
+from pages.test_ShopOnePage import ShopOnePage
+from pages.test_ShopTwoPage import ShopTwoPage
+from pages.test_ShopThreePage import ShopThreePage
+from pages.test_ShopFourPage import ShopFourPage
+from pages.test_ShopFivePage import ShopFivePage
 
 
 def test_shop():

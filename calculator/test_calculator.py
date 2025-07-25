@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-from pages.CalcPage import CalcPage
+from pages.test_CalcPage import CalcPage
 
 
 def test_calc():
