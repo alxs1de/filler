@@ -16,7 +16,7 @@ def chrome():
 @allure.severity("normal")
 def test_search(chrome):
     chrome.get("https://www.kinopoisk.ru/")
-    chrome.find_element(By.NAME, "kp_query").send_keys("Остров")
+    chrome.find_element(By.NAME, "kp_query").send_keys("Остров проклятых")
     chrome.find_element(By.ID, "suggest-item-film-397667").click()
     assert chrome.find_element(By.CSS_SELECTOR, "span[data-tid='75209b22']").text == "Остров проклятых (2009)"
 
