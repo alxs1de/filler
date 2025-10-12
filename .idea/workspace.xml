@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0982634-598a-4767-ab11-047e0297abb0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/test_kinopoisk.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_kinopoisk_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_api.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#12 on lesson11k__4&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#13 on lesson11k__5&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Mvideo/Documents/GHFolder/filler&quot;
   }
 }</component>
