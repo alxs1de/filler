@@ -22,9 +22,38 @@ def test_search(chrome):
 
 
 @allure.title("Поиск фильма по символам")
-@allure.description("Ввод в поисковую страку символов")
+@allure.description("Ввод в поисковую строку символов")
 @allure.severity("normal")
 def test_negative(chrome):
     chrome.get("https://www.kinopoisk.ru/")
     chrome.find_element(By.NAME, "kp_query").send_keys("@!%")
     assert chrome.find_element(By.XPATH, "//*[contains(@class, 'emptySuggest')]").text == "По вашему запросу ничего не найдено"
+
+@allure.title("Поиск фильма по названию")
+@allure.description("Вход на страницу фильма, выбор фильма")
+@allure.severity("normal")
+def test_search(chrome):
+    chrome.get("https://www.kinopoisk.ru/")
+    chrome.find_element(By.NAME, "kp_query").send_keys("Криминальное чтиво")
+    chrome.find_element(By.ID, "suggest-item-film-342").click()
+    assert chrome.find_element(By.CSS_SELECTOR, "span[data-tid='57f72b5']").text == "Криминальное чтиво (1994)"
+
+
+@allure.title("Поиск фильма по символам")
+@allure.description("Ввод в поисковую строку символов")
+@allure.severity("normal")
+def test_search(chrome):
+    chrome.get("https://www.kinopoisk.ru/")
+    chrome.find_element(By.NAME, "kp_query").send_keys("Остров проклятых")
+    chrome.find_element(By.ID, "suggest-item-film-397667").click()
+    assert chrome.find_element(By.CSS_SELECTOR, "span[data-tid='75209b22']").text == "Остров проклятых (2009)"
+
+
+@allure.title("Поиск фильма по символам")
+@allure.description("Ввод в поисковую строку символов")
+@allure.severity("normal")
+def test_search(chrome):
+    chrome.get("https://www.kinopoisk.ru/")
+    chrome.find_element(By.NAME, "kp_query").send_keys("Остров проклятых")
+    chrome.find_element(By.ID, "suggest-item-film-397667").click()
+    assert chrome.find_element(By.CSS_SELECTOR, "span[data-tid='75209b22']").text == "Остров проклятых (2009)"
